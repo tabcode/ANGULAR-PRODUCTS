@@ -1,1 +1,1 @@
-![Alt text](Capture.png?raw=true "Optional Title")
+![Alt text](Capture.jpg?raw=true "Optional Title")
