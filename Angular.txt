@@ -1,0 +1,87 @@
+Requisitos
+
+* Rectividad:
+	Es un patron de como actualizamos nuestra vista basados en datos.
+	En angular tenemos dos componentes basicos:
+		LOS DATOS => lo que vamos a representar
+			Los datos pueden cambiar con forme alguna de las siguientes actividades:
+				1. Cambios en estado
+				2. Solicitudes HTTP
+				3. Eventos
+				4. Servicios
+				5. Operaciones
+		VISTA => lugar donde vamos a representarlos (html)
+
+* Javascript
+
+* Conceptos de POO
+	Clases 
+		Son los moldes que le dan vida a nuestros objetos
+		Se dice que instanciamos un objeto basado en una clase
+
+	Herencia
+		Son clases o componentes padre
+
+	Interfaces
+		Nos ayuda a defenir lo que una clase necesita implementar
+		Pura definicion
+
+	Inyeccion de dependencias
+		Poder importar componentes o algunas otras librerias o otras clases
+
+* Fundamentos Typescript
+	* Decoradores nos permiten anadir metadatos
+		(verlos como si fueran comentarios que typescript utiliza para hacer actividades.)
+		@Component({
+			selector:'app-shopping-item',
+			templateUrl: './route',
+			styleUrls: ['./route']
+		})
+
+	* Tipado estricto
+		@Input() total:number = 0;
+		items: Item[];
+
+	* Genericos
+		crear funciones, metodos o clases que acepta varios tipos de datos
+		deleteItem(item:Item):Observable<Item>{}
+
+* Rxjs
+	Es una tecnologia con el objetivo de manejar o gestionar el flujo de eventos
+	por ejemplo: 
+		click
+		submit
+		etc...
+
+	Observable
+		permite configurar el evento que nosotros queremos manipular.
+		como si fuera un servicio:
+			lo defines, haces tus operaciones.
+	
+	Subscribe
+		sirve para tomar los valores de un observable
+
+ANGULAR DIRECTIVA
+	*ngFor="let item of items"
+
+ANGULAR PROPS
+	[item]="item"
+	(deleteItem)="deleteItem($event)"
+	(toggleItem)="toggleItem($event)"
+
+	@input
+		una propiedad de entrada por ejemplo [item]="item"
+		esperar que alguien mas le pase el valor
+		padre => hijo
+
+	@output
+		para props de salida
+		mandar informacion de vuelta 
+		hijo => padre
+
+ANGULAR BINDING (unir la vista de los datos)
+	[(ngModel)]="title"
+
+ANGULAR SERVICIOS 
+	es una forma de acceder a datos de forma global
+	
